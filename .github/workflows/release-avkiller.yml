@@ -16,7 +16,7 @@ jobs:
   # =======================================================
   validate:
     name: 1️⃣ 校验版本号
-    if: github.ref == 'refs/heads/main'
+    # if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     outputs:
       new_version: ${{ steps.compare.outputs.new_version }}
@@ -80,7 +80,7 @@ jobs:
   # =======================================================
   build:
     name: 2️⃣ 构建 APK
-    if: github.ref == 'refs/heads/main'
+    # if: github.ref == 'refs/heads/main'
     needs: validate
     runs-on: ubuntu-22.04
     outputs:
@@ -215,7 +215,7 @@ jobs:
   # =======================================================
   release_github:
     name: 4️⃣ 发布到 GitHub
-    if: github.ref == 'refs/heads/main'
+    # if: github.ref == 'refs/heads/main'
     needs: [validate, build]
     runs-on: ubuntu-latest
 
