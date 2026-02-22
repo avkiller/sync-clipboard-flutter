@@ -226,11 +226,6 @@ jobs:
           name: release-apk
           path: ./artifacts
 
-      - name: 下载元数据
-        uses: actions/download-artifact@v7
-        with:
-          name: release-metadata
-          path: ./artifacts
 
       - name: 创建 GitHub Release
         uses: ncipollo/release-action@v1
@@ -238,15 +233,9 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ needs.validate.outputs.new_tag }}
           name: ${{ needs.validate.outputs.new_tag }}
-          body: |
-            ${{ needs.generate_metadata.outputs.changelog }}
-
-            ---
-            **Full Changelog**: ${{ needs.generate_metadata.outputs.changelog_link }}
           prerelease: false
           artifacts: |
             ./artifacts/${{ needs.validate.outputs.apk_name }}
-            ./artifacts/update.json
 
   # =======================================================
   # JOB 5: 发布到 CNB
