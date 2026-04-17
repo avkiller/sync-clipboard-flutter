@@ -2,6 +2,33 @@
 
 # SyncClipboard Flutter 更新日志
 ## [Unreleased]
+
+### ⚠ 重要提醒
+- 0.3.0 以后版本，仅能与 SyncClipboard v3.1.1 及以上版本搭配使用
+
+### Feat
+
+- 记忆日志级别筛选并优化日志页展示
+
+### Fixed
+
+- 修复部分文本无法正常读取上传的问题
+
+## [0.3.2] - 2026-04-06
+
+### ⚠ 重要提醒
+- 0.3.0 以后版本，仅能与 SyncClipboard v3.1.1 及以上版本搭配使用
+
+### Added
+
+- 支持直接上传剪贴板的图片/文件等
+
+### Fixed
+
+- 导航键模式下 UI 被遮挡
+- 点击空白处自动移除输入框的焦点
+- 磁贴有概率变暗无法交互
+
 ## [0.3.1] - 2026-03-21
 
 ### ⚠ 重要提醒
@@ -83,7 +110,8 @@
 
 - 第一次正式发布 sync-clipboard-tauri
 
-[Unreleased]: https://github.com/bling-yshs/sync-clipboard-flutter/compare/v0.3.1...HEAD
+[Unreleased]: https://github.com/bling-yshs/sync-clipboard-flutter/compare/v0.3.2...HEAD
+[0.3.2]: https://github.com/bling-yshs/sync-clipboard-flutter/commits/v0.3.2
 [0.3.1]: https://github.com/bling-yshs/sync-clipboard-flutter/commits/v0.3.1
 [0.3.0]: https://github.com/bling-yshs/sync-clipboard-flutter/commits/v0.3.0
 [0.2.3]: https://github.com/bling-yshs/sync-clipboard-flutter/commits/v0.2.3
